@@ -1,0 +1,387 @@
+# FlowGen_demo:
+#   inference_config: "configs_stage2/inference/inference.yaml"
+#   motion_module:
+#     - "models/Motion_Module/mm_sd_v15_v2.ckpt"
+#     #- "outputs/training-2023-10-15T20-36-00/checkpoints/checkpoint40000.ckpt"
+
+#   dreambooth_path: ""
+#   lora_model_path: ""
+
+#   seed:           [13100322578370451493, 14752961627088720670, 9329399085567825781, 16987697414827649302, 13100322578370451493, 14752961627088720670, 9329399085567825781, 16987697414827649302, 13100322578370451493, 14752961627088720670, 9329399085567825781, 16987697414827649302, 13100322578370451493, 14752961627088720670, 9329399085567825781, 16987697414827649302, 13100322578370451493, 14752961627088720670, 9329399085567825781, 16987697414827649302]
+#   steps:          25
+#   guidance_scale: 7.5
+
+#   img_path:
+#     - "./test_imgs/fast moving car-towards camera"
+#     - "./test_imgs/fast moving car-away"
+#     - "./test_imgs/bear"
+#     - "./test_imgs/bmx-trees"
+#     - "./test_imgs/boxing-fisheye"
+#     - "./test_imgs/breakdance-flare"
+#     - "./test_imgs/cat-girl"
+#     - "./test_imgs/crossing"
+#     - "./test_imgs/drift-straight"
+#     - "./test_imgs/drift-turn"
+#     - "./test_imgs/hockey"
+#     - "./test_imgs/lab-coat"
+#     - "./test_imgs/lucia"
+#     - "./test_imgs/seagull"
+
+    
+#   prompt:
+#     - "a fast moving silver Boxster, high resolution, HD, 4K"
+#     - "a fast moving silver Boxster, high resolution, HD, 4K"
+#     - "a brown bear walking through a rocky area, high resolution, HD, 4K"
+#     - "a man in white t-shirt is riding a bike in front of a painted wall, high resolution, HD, 4K"
+#     - "two men are boxing in the middle of a ring, a referee in white t-shirt, high resolution, HD, 4K"
+#     - "a person doing a breakdance on the street, handstanding, high resolution, HD, 4K"
+#     - "a little girl is holding a kitten, high resolution, HD, 4K"
+#     - "two people crossing the street, high resolution, HD, 4K"
+#     - "a red car drifting on a race track, high resolution, HD, 4K"
+#     - "a drift car on a track with smoke, high resolution, HD, 4K"
+#     - "a man is playing hockey on an outdoor court, high resolution, HD, 4K"
+#     - "zoom-in view of three girls in white lab-coat standing on a tennis court, high resolution, HD, 4K"
+#     - "a woman in a black dress is walking down a path, high resolution, HD, 4K"
+#     - "a flock of seagulls flying over a body of water, high resolution, HD, 4K"
+
+    
+#   n_prompt:
+#     - "semi-realistic, cgi, 3d, render, sketch, cartoon, drawing, anime, text, close up, cropped, out of frame, worst quality, low quality, jpeg artifacts, ugly, duplicate, morbid, mutilated, extra fingers, mutated hands, poorly drawn hands, poorly drawn face, mutation, deformed, blurry, dehydrated, bad anatomy, bad proportions, extra limbs, cloned face, disfigured, gross proportions, malformed limbs, missing arms, missing legs, extra arms, extra legs, fused fingers, too many fingers, long neck"
+#     - "semi-realistic, cgi, 3d, render, sketch, cartoon, drawing, anime, text, close up, cropped, out of frame, worst quality, low quality, jpeg artifacts, ugly, duplicate, morbid, mutilated, extra fingers, mutated hands, poorly drawn hands, poorly drawn face, mutation, deformed, blurry, dehydrated, bad anatomy, bad proportions, extra limbs, cloned face, disfigured, gross proportions, malformed limbs, missing arms, missing legs, extra arms, extra legs, fused fingers, too many fingers, long neck"
+#     - "semi-realistic, cgi, 3d, render, sketch, cartoon, drawing, anime, text, close up, cropped, out of frame, worst quality, low quality, jpeg artifacts, ugly, duplicate, morbid, mutilated, extra fingers, mutated hands, poorly drawn hands, poorly drawn face, mutation, deformed, blurry, dehydrated, bad anatomy, bad proportions, extra limbs, cloned face, disfigured, gross proportions, malformed limbs, missing arms, missing legs, extra arms, extra legs, fused fingers, too many fingers, long neck"
+#     - "semi-realistic, cgi, 3d, render, sketch, cartoon, drawing, anime, text, close up, cropped, out of frame, worst quality, low quality, jpeg artifacts, ugly, duplicate, morbid, mutilated, extra fingers, mutated hands, poorly drawn hands, poorly drawn face, mutation, deformed, blurry, dehydrated, bad anatomy, bad proportions, extra limbs, cloned face, disfigured, gross proportions, malformed limbs, missing arms, missing legs, extra arms, extra legs, fused fingers, too many fingers, long neck"
+#     - "semi-realistic, cgi, 3d, render, sketch, cartoon, drawing, anime, text, close up, cropped, out of frame, worst quality, low quality, jpeg artifacts, ugly, duplicate, morbid, mutilated, extra fingers, mutated hands, poorly drawn hands, poorly drawn face, mutation, deformed, blurry, dehydrated, bad anatomy, bad proportions, extra limbs, cloned face, disfigured, gross proportions, malformed limbs, missing arms, missing legs, extra arms, extra legs, fused fingers, too many fingers, long neck"
+#     - "semi-realistic, cgi, 3d, render, sketch, cartoon, drawing, anime, text, close up, cropped, out of frame, worst quality, low quality, jpeg artifacts, ugly, duplicate, morbid, mutilated, extra fingers, mutated hands, poorly drawn hands, poorly drawn face, mutation, deformed, blurry, dehydrated, bad anatomy, bad proportions, extra limbs, cloned face, disfigured, gross proportions, malformed limbs, missing arms, missing legs, extra arms, extra legs, fused fingers, too many fingers, long neck"
+#     - "semi-realistic, cgi, 3d, render, sketch, cartoon, drawing, anime, text, close up, cropped, out of frame, worst quality, low quality, jpeg artifacts, ugly, duplicate, morbid, mutilated, extra fingers, mutated hands, poorly drawn hands, poorly drawn face, mutation, deformed, blurry, dehydrated, bad anatomy, bad proportions, extra limbs, cloned face, disfigured, gross proportions, malformed limbs, missing arms, missing legs, extra arms, extra legs, fused fingers, too many fingers, long neck"
+#     - "semi-realistic, cgi, 3d, render, sketch, cartoon, drawing, anime, text, close up, cropped, out of frame, worst quality, low quality, jpeg artifacts, ugly, duplicate, morbid, mutilated, extra fingers, mutated hands, poorly drawn hands, poorly drawn face, mutation, deformed, blurry, dehydrated, bad anatomy, bad proportions, extra limbs, cloned face, disfigured, gross proportions, malformed limbs, missing arms, missing legs, extra arms, extra legs, fused fingers, too many fingers, long neck"
+#     - "semi-realistic, cgi, 3d, render, sketch, cartoon, drawing, anime, text, close up, cropped, out of frame, worst quality, low quality, jpeg artifacts, ugly, duplicate, morbid, mutilated, extra fingers, mutated hands, poorly drawn hands, poorly drawn face, mutation, deformed, blurry, dehydrated, bad anatomy, bad proportions, extra limbs, cloned face, disfigured, gross proportions, malformed limbs, missing arms, missing legs, extra arms, extra legs, fused fingers, too many fingers, long neck"
+#     - "semi-realistic, cgi, 3d, render, sketch, cartoon, drawing, anime, text, close up, cropped, out of frame, worst quality, low quality, jpeg artifacts, ugly, duplicate, morbid, mutilated, extra fingers, mutated hands, poorly drawn hands, poorly drawn face, mutation, deformed, blurry, dehydrated, bad anatomy, bad proportions, extra limbs, cloned face, disfigured, gross proportions, malformed limbs, missing arms, missing legs, extra arms, extra legs, fused fingers, too many fingers, long neck"
+#     - "semi-realistic, cgi, 3d, render, sketch, cartoon, drawing, anime, text, close up, cropped, out of frame, worst quality, low quality, jpeg artifacts, ugly, duplicate, morbid, mutilated, extra fingers, mutated hands, poorly drawn hands, poorly drawn face, mutation, deformed, blurry, dehydrated, bad anatomy, bad proportions, extra limbs, cloned face, disfigured, gross proportions, malformed limbs, missing arms, missing legs, extra arms, extra legs, fused fingers, too many fingers, long neck"
+#     - "semi-realistic, cgi, 3d, render, sketch, cartoon, drawing, anime, text, close up, cropped, out of frame, worst quality, low quality, jpeg artifacts, ugly, duplicate, morbid, mutilated, extra fingers, mutated hands, poorly drawn hands, poorly drawn face, mutation, deformed, blurry, dehydrated, bad anatomy, bad proportions, extra limbs, cloned face, disfigured, gross proportions, malformed limbs, missing arms, missing legs, extra arms, extra legs, fused fingers, too many fingers, long neck"
+#     - "semi-realistic, cgi, 3d, render, sketch, cartoon, drawing, anime, text, close up, cropped, out of frame, worst quality, low quality, jpeg artifacts, ugly, duplicate, morbid, mutilated, extra fingers, mutated hands, poorly drawn hands, poorly drawn face, mutation, deformed, blurry, dehydrated, bad anatomy, bad proportions, extra limbs, cloned face, disfigured, gross proportions, malformed limbs, missing arms, missing legs, extra arms, extra legs, fused fingers, too many fingers, long neck"
+#     - "semi-realistic, cgi, 3d, render, sketch, cartoon, drawing, anime, text, close up, cropped, out of frame, worst quality, low quality, jpeg artifacts, ugly, duplicate, morbid, mutilated, extra fingers, mutated hands, poorly drawn hands, poorly drawn face, mutation, deformed, blurry, dehydrated, bad anatomy, bad proportions, extra limbs, cloned face, disfigured, gross proportions, malformed limbs, missing arms, missing legs, extra arms, extra legs, fused fingers, too many fingers, long neck"
+#     - "semi-realistic, cgi, 3d, render, sketch, cartoon, drawing, anime, text, close up, cropped, out of frame, worst quality, low quality, jpeg artifacts, ugly, duplicate, morbid, mutilated, extra fingers, mutated hands, poorly drawn hands, poorly drawn face, mutation, deformed, blurry, dehydrated, bad anatomy, bad proportions, extra limbs, cloned face, disfigured, gross proportions, malformed limbs, missing arms, missing legs, extra arms, extra legs, fused fingers, too many fingers, long neck"
+#     - "semi-realistic, cgi, 3d, render, sketch, cartoon, drawing, anime, text, close up, cropped, out of frame, worst quality, low quality, jpeg artifacts, ugly, duplicate, morbid, mutilated, extra fingers, mutated hands, poorly drawn hands, poorly drawn face, mutation, deformed, blurry, dehydrated, bad anatomy, bad proportions, extra limbs, cloned face, disfigured, gross proportions, malformed limbs, missing arms, missing legs, extra arms, extra legs, fused fingers, too many fingers, long neck"
+#     - "semi-realistic, cgi, 3d, render, sketch, cartoon, drawing, anime, text, close up, cropped, out of frame, worst quality, low quality, jpeg artifacts, ugly, duplicate, morbid, mutilated, extra fingers, mutated hands, poorly drawn hands, poorly drawn face, mutation, deformed, blurry, dehydrated, bad anatomy, bad proportions, extra limbs, cloned face, disfigured, gross proportions, malformed limbs, missing arms, missing legs, extra arms, extra legs, fused fingers, too many fingers, long neck"
+#     - "semi-realistic, cgi, 3d, render, sketch, cartoon, drawing, anime, text, close up, cropped, out of frame, worst quality, low quality, jpeg artifacts, ugly, duplicate, morbid, mutilated, extra fingers, mutated hands, poorly drawn hands, poorly drawn face, mutation, deformed, blurry, dehydrated, bad anatomy, bad proportions, extra limbs, cloned face, disfigured, gross proportions, malformed limbs, missing arms, missing legs, extra arms, extra legs, fused fingers, too many fingers, long neck"
+#     - "semi-realistic, cgi, 3d, render, sketch, cartoon, drawing, anime, text, close up, cropped, out of frame, worst quality, low quality, jpeg artifacts, ugly, duplicate, morbid, mutilated, extra fingers, mutated hands, poorly drawn hands, poorly drawn face, mutation, deformed, blurry, dehydrated, bad anatomy, bad proportions, extra limbs, cloned face, disfigured, gross proportions, malformed limbs, missing arms, missing legs, extra arms, extra legs, fused fingers, too many fingers, long neck"
+#     - "semi-realistic, cgi, 3d, render, sketch, cartoon, drawing, anime, text, close up, cropped, out of frame, worst quality, low quality, jpeg artifacts, ugly, duplicate, morbid, mutilated, extra fingers, mutated hands, poorly drawn hands, poorly drawn face, mutation, deformed, blurry, dehydrated, bad anatomy, bad proportions, extra limbs, cloned face, disfigured, gross proportions, malformed limbs, missing arms, missing legs, extra arms, extra legs, fused fingers, too many fingers, long neck"
+
+
+
+FlowGen_demo:
+  inference_config: "configs_stage2/inference/inference.yaml"
+  motion_module:
+    - "models/Motion_Module/mm_sd_v15_v2.ckpt"
+    #- "outputs/training-2023-10-15T20-36-00/checkpoints/checkpoint40000.ckpt"
+
+  dreambooth_path: ""
+  lora_model_path: ""
+
+  seed:           13100322578370451493
+  steps:          25
+  guidance_scale: 6
+
+  img_path:
+    - ./test_imgs/beach-4206785_1280.jpg
+    - ./test_imgs/pexels-jess-loiterton-4319752.jpg
+    - ./test_imgs/pexels-lisa-fotios-109275.jpg
+    - ./test_imgs/pexels-nitin-dhumal-46710.jpg
+    - ./test_imgs/pexels-pavel-danilyuk-8294620.jpg
+    - ./test_imgs/pexels-pixabay-210019.jpg
+    - ./test_imgs/pexels-somchai-kongkamsri-20258.jpg
+    - ./test_imgs/pexels-specna-arms-886453.jpg
+    - ./test_imgs/pexels-trace-constant-707046.jpg
+    - ./test_imgs/pexels-alisson-souto-1759611.jpg
+    - ./test_imgs/pexels-altan-can-14686356.jpg
+    - ./test_imgs/pexels-elaine-bernadine-castro-2403850.jpg
+    - ./test_imgs/pexels-pixabay-207891.jpg
+    - ./test_imgs/pexels-recal-media-60217.jpg
+    - ./test_imgs/pexels-summer-stock-300957.jpg
+    - ./test_imgs/20231219162113_24221.jpg
+    - ./test_imgs/man-886601_1280.jpg
+    - ./test_imgs/pexels-elevate-1267320.jpg
+    - ./test_imgs/pexels-oziel-gómez-849835.jpg
+    - ./test_imgs/pexels-pavel-danilyuk-8294606.jpg
+    - ./test_imgs/pexels-pavel-danilyuk-8294660.jpg
+    - ./test_imgs/pexels-pixabay-78783.jpg
+    - ./test_imgs/smartphone-3058978_1280.jpg
+    - ./test_imgs/u=1055004418,2235330750&fm=253&fmt=auto&app=120&f=JPEG.webp
+    - ./test_imgs/v2-a9493129464e00897626db0ed13ae120_1440w.png
+    - ./test_imgs/burning-money-2113914_1280.jpg
+    - ./test_imgs/dog-3822183_1280.jpg
+    - ./test_imgs/pexels-andrea-piacquadio-3756616.jpg
+    - ./test_imgs/pexels-helena-lopes-1996333.jpg
+    - ./test_imgs/pexels-pixabay-36843.jpg
+    - ./test_imgs/stone-lion-2557720_1280.jpg
+    - ./test_imgs/swan-7708580_1280.jpg
+    - ./test_imgs/train-track-2507499_1280.jpg
+    - ./test_imgs/waterfall-8488186_1280.jpg
+    - ./test_imgs/windmill-7408365_1280.jpg
+    - ./test_imgs/bird-7411270_1280.jpg
+    - ./test_imgs/bird-7586857_1280.jpg
+    - ./test_imgs/dog-7330712_1280.jpg
+    - ./test_imgs/dog-7396912_1280.jpg
+    - ./test_imgs/halloween-4585684_1280.jpg
+    - ./test_imgs/leaf-7260246_1280.jpg
+    - ./test_imgs/meerkat-7465819_1280.jpg
+    - ./test_imgs/mobile-phone-1875813_1280.jpg
+    - ./test_imgs/power-station-6579092_1280.jpg
+    - ./test_imgs/rider-1542465_1280.jpg
+   - ./test_imgs/ai-generated-8255456_1280.png
+    - ./test_imgs/ai-generated-8411866_1280.jpg
+    - ./test_imgs/ai-generated-8463496_1280.jpg
+    - ./test_imgs/ai-generated-8476858_1280.png
+    - ./test_imgs/ai-generated-8481641_1280.jpg
+    - ./test_imgs/ai-generated-8496135_1280.jpg
+    - ./test_imgs/ai-generated-8496952_1280.jpg
+    - ./test_imgs/ai-generated-8498844_1280.jpg
+    - ./test_imgs/woman-4549327_1280.jpg
+    - ./test_imgs/woman-5667299_1280.jpg
+    - ./test_imgs/ai-generated-8479572_1280.jpg
+    - ./test_imgs/ai-generated-8489879_1280.png
+    - ./test_imgs/bird-8014191_1280.jpg
+    - ./test_imgs/couple-8019370_1280.jpg
+    - ./test_imgs/cupcakes-380178_1280.jpg
+    - ./test_imgs/girl-4898696_1280.jpg
+    - ./test_imgs/mother-8097324_1280.jpg
+    - ./test_imgs/sleep-7871915_1280.jpg
+    - ./test_imgs/squirrel-7985502_1280.jpg
+    - ./test_imgs/woman-4757707_1280.jpg
+    - ./test_imgs/grey-capped-flycatcher-8071233_1280.jpg
+    - ./test_imgs/piano-7303732_1280.jpg
+    - ./test_imgs/plane-8145957_1280.jpg
+    - ./test_imgs/red-stem-8302232_1280.jpg
+    - ./test_imgs/ship-7833921_1280.jpg
+    - ./test_imgs/squirrel-8211238_1280.jpg
+    - ./test_imgs/tiger-8356190_1280.jpg
+    - ./test_imgs/training-8122941_1280.jpg
+    - ./test_imgs/violin-8405558_1280.jpg
+    - ./test_imgs/weight-8246973_1280.jpg
+    - ./test_imgs/airplane-8315886_1280.jpg
+    - ./test_imgs/animal-8318650_1280.jpg
+    - ./test_imgs/automobile-8078415_1280.jpg
+    - ./test_imgs/bee-8113969_1280.jpg
+    - ./test_imgs/boy-8399526_1280.jpg
+    - ./test_imgs/cat-8282097_1280.jpg
+    - ./test_imgs/duck-8469484_1280.jpg
+    - ./test_imgs/motorcycle-8366394_1280.jpg
+    - ./test_imgs/sunset-815270_1280.jpg
+    - ./test_imgs/woman-15840_1280.jpg
+    - ./test_imgs/aniya1.webp
+    - ./test_imgs/aniya2.webp
+    - ./test_imgs/aniya3.jpeg
+    - ./test_imgs/beach-8267793_1280.jpg
+    - ./test_imgs/bird-4410411_1280.jpg
+    - ./test_imgs/car-4445171_1280.jpg
+    - ./test_imgs/cat-1045782_1280.jpg
+    - ./test_imgs/Chinese_flag_(Beijing)_-_IMG_1104.jpg
+    - ./test_imgs/dancer-287078_1280.jpg
+    - ./test_imgs/discus-fish-1943755_1280.jpg
+    - ./test_imgs/fox-715588_1280.jpg
+    - ./test_imgs/ice-6215207_1280.jpg
+    - ./test_imgs/jellyfish-6653502_1280.jpg
+    - ./test_imgs/mountains-5946500_1280.jpg
+    - ./test_imgs/ocean-7736669_1280.jpg
+    - ./test_imgs/pexels-alex-nasto-582635.jpg
+    - ./test_imgs/pexels-andrea-piacquadio-3764538.jpg
+    - ./test_imgs/pexels-andrea-piacquadio-3785718.jpg
+    - ./test_imgs/pexels-anna-shvets-4588065.jpg
+    - ./test_imgs/pexels-chevanon-photography-1108099.jpg
+    - ./test_imgs/pexels-elle-hughes-2696064.jpg
+    - ./test_imgs/pexels-ketut-subiyanto-4474034.jpg
+    - ./test_imgs/pexels-li-sun-371049.jpg
+    - ./test_imgs/pexels-picography-4776.jpg
+    - ./test_imgs/pexels-pixabay-2159.jpg
+    - ./test_imgs/pexels-pixabay-39857.jpg
+    - ./test_imgs/pexels-pixabay-41162.jpg
+    - ./test_imgs/pexels-pixabay-63280.jpg
+    - ./test_imgs/pexels-pixabay-163036.jpg
+    - ./test_imgs/pexels-pixabay-163239.jpg
+    - ./test_imgs/pexels-sebastian-voortman-804574.jpg
+    - ./test_imgs/sea-2361247_1280.jpg
+    - ./test_imgs/sheep-5078377_1280.jpg
+    - ./test_imgs/snail-6191155_1280.jpg
+    - ./test_imgs/sunflowers-7353922_1280.jpg
+    - ./test_imgs/kids-5026267_1280.jpg
+    - ./test_imgs/kermit-601710_1280.jpg
+    - ./test_imgs/train-1728537_1280.jpg
+    - ./test_imgs/train-7859021_1280.jpg
+    - ./test_imgs/aquarium-5650174_1280.jpg
+    - ./test_imgs/ball-1845546_1280.jpg
+    - ./test_imgs/boy-1835416_1280.jpg
+    - ./test_imgs/couple-8498866_1280.jpg
+    - ./test_imgs/jet-ski-1980439_1280.jpg
+    - ./test_imgs/mexico-88768_1280.jpg
+    - ./test_imgs/shepherd-dog-4357790_1280.jpg
+    - ./test_imgs/silvester-8485473_1280.jpg
+    - ./test_imgs/teddy-8361594_1280.jpg
+    - ./test_imgs/woman-8450064_1280.jpg
+    - ./test_imgs/ai-generated-8485714_1280.jpg
+    - ./test_imgs/ai-generated-8485769_1280.jpg
+    - ./test_imgs/ai-generated-8493529_1280.jpg
+    - ./test_imgs/corgi-6673343_1280.jpg
+    - ./test_imgs/girl-6096180_1280.jpg
+    - ./test_imgs/kettles-2178442_1280.jpg
+    - ./test_imgs/white-wine-3835585_1280.jpg
+    - ./test_imgs/barista-5055060_1280.jpg
+    - ./test_imgs/burgers-1839090_1280.jpg
+    - ./test_imgs/butterfly-8422900_1280.jpg
+    - ./test_imgs/dog-8445917_1280.jpg
+    - ./test_imgs/man-3803551_1280.jpg
+    - ./test_imgs/woman-1979272_1280.jpg
+  prompt:
+    - Aerial view of a beach with foamy waves washing onto the sand.
+    - Group of surfers on colorful boards riding a turquoise wave.
+    - Refreshing summer drink with a lemon slice and two straws.
+    - Sunset through orange-tinted aviator sunglasses on a sandy beach.
+    - Modern white humanoid robot with blue eye lights.
+    - Red sports car in motion on a forest-lined road.
+    - Armed soldiers in combat gear with a helicopter in the background.
+    - Close-up of a soldier aiming a rifle with a scope.
+    - White sedan kicking up dust on a rural dirt road.
+    - Woman with yellow beanie and sunglasses looking intently at the camera.
+    - Hot air balloons glowing at dusk with a darkening sky in the background.
+    - Hand holding a slice of watermelon over clear blue water.
+    - Teddy bear sitting on a mini wooden bench with a bokeh background.
+    - Tropical sunset view with silhouettes of palm trees and a reflective pool.
+    - Couple sharing a romantic moment at the beach with a sunset backdrop.
+    - Man by the Lake
+    - Shooting Practice in the Woods
+    - Chef Preparing Gourmet Dishes
+    - Old Car in Snowy Landscape
+    - Robot with Raised Hands
+    - Robot with Arms Crossed
+    - Soldier Firing a Rifle
+    - Hand Holding Smartphone Displaying Path
+    - Man with a Serene Background
+    - Man in the Night
+    - Burning Hundred Dollar Bill
+    - Dog in a Tuxedo in a Modern Office
+    - Stylish Skeleton with Afro and Sunglasses
+    - White Horse Galloping in a Meadow
+    - Majestic Lion Roaring
+    - Stone Lion Statue
+    - Swan Gliding on Calm Lake
+    - Man Walking on Train Tracks through Smartphone Screen
+    - Rushing Waterfall between Rocky Cliffs
+    - Traditional Windmills under Blue Sky
+    - Graceful Seagull in Flight over Water
+    - Elegant White Swan Preening in Dark Waters
+    - Joyful Husky Running in the Forest
+    - Contemplative Dog by the Waterside at Sunset
+    - Spooky Lit Jack-o'-lantern with Smoke
+    - Fresh Raindrops on Vibrant Green Leaf
+    - Alert Meerkat Standing on a Log
+    - Holographic Projection of a Castle from Smartphone
+    - Industrial Smokestacks Emitting Smoke into the Sky
+    - Lone Rider on Horseback at Seashore during Sunset 
+    - A lone observer overlooking a neon-lit future city at sunset.
+    - A sleek humanoid robot waving hello.
+    - A humanoid robot with a human-like face smiling.
+    - A stylized portrait of a woman with emerald hair in a futuristic city.
+    - A UFO hovering over a desert with two onlookers at a distance.
+    - A person in a VR suit immersed in a network of data connections.
+    - A cheerful cartoonish pink car with eyes and a smile.
+    - A young boy with headphones enjoying music in a vibrant neon city.
+    - A smiling woman wearing a sunhat on a bright beach
+    - A woman in a winter setting, exuding warmth despite the cold.
+    - A panda holding a smartphone.
+    - A plush teddy bear sitting against a wooden background.
+    - A close-up of a bald eagle calling out.
+    - A couple embracing on their wedding day.
+    - Birthday cupcakes with lit candles.
+    - A woman blowing snow from her hands on a sunny winter day.
+    - A joyful mother lifting her baby in the air.
+    - A newborn baby sleeping peacefully.
+    - A squirrel eating a nut on a wooden fence.
+    - A woman holding sparklers on a street with festive lights.
+    - A grey-capped flycatcher perched on a branch.
+    - A child's hands on piano keys.
+    - An airplane captured from below against a cloudy sky.
+    - A common redshank in flight with a clear blue sky in the background.
+    - A sailboat on a clear day with a mountainous coastline in the distance.
+    - A squirrel on a tree branch, alert and watching.
+    - A tiger wading through water with autumn leaves floating around.
+    - A motorcyclist racing on a dirt track, kicking up dust.
+    - A woman in a wedding dress playing the violin.
+    - A close-up of a hand lifting a dumbbell.
+    - "Vintage Fighter Plane in Flight"
+    - "Pensive Monkey Seated"
+    - "Yellow Car at Intersection"
+    - "Bee Pollinating Lavender"
+    - "Street Musician Playing Trumpet"
+    - "Curious Grey Kitten"
+    - "Duck Floating on Water"
+    - "Motorcyclist on the Road"
+    - "Sunset Over Poppy Field"
+    - "Woman Snorkeling Underwater"
+    - A cartoon character with pink hair and expressive eyes showing surprise.
+    - A cartoon character with pink hair smiling with closed eyes.
+    - A cartoon character with pink hair, cat ears, and a puzzled expression.
+    - A person with a backpack standing on a sandy beach looking at dunes.
+    - A colorful bird perched on a branch.
+    - A classic black sports car parked on a city street.
+    - A fluffy grey cat with striking blue eyes.
+    - The national flag of China waving in the wind.
+    - A person in red standing with arms raised in front of a waterfall.
+    - A colorful discus fish swimming in an aquarium.
+    - A red fox standing in the snow.
+    - Two clear ice cubes on a dark surface with water droplets.
+    - A jellyfish with long tentacles swimming in dark blue water.
+    - Sunset over misty mountains with clouds in the sky.
+    - Cliffside by the ocean with waves hitting the shore.
+    - A lighter with a flame against a dark background.
+    - Two athletes in starting positions on a track.
+    - A person cooking in a kitchen, stirring a frying pan.
+    - A rabbit with sunglasses on a yellow background.
+    - Two puppies sitting on grass with fallen leaves.
+    - Chefs preparing food in a commercial kitchen.
+    - A family with two children looking at a laptop screen.
+    - A person performing a squat with a barbell at a gym.
+    - A graffiti of a man's face with a colorful beard on a wall.
+    - A space shuttle launching with smoke and fire beneath it.
+    - A leopard walking on a dirt road looking alert.
+    - An astronaut on the lunar surface with a reflection in the helmet.
+    - A motocross rider in mid-air during a jump.
+    - Three toy figures, one green dinosaur and two characters in blue and green outfits.
+    - A young baseball player running on the field during a game.
+    - A person on a blue snowmobile raising their fists in triumph in a snowy landscape.
+    - A sea turtle swimming underwater with a patterned shell.
+    - A ewe and three lambs standing in a grassy field.
+    - A brown snail crawling on a wooden surface.
+    - A field of blooming sunflowers under a clear sky.
+    - Two young boys in a wooden interior room engaged in a playful pillow fight, with a joyful expression on the face of the boy in green.
+    - A vibrant green plush toy of a famous frog character wearing a red and white scarf, holding a small snowball, with a snowy background.
+    - A classic black steam locomotive with red wheels crossing a bridge over a lush green valley, emitting a plume of white smoke against a clear blue sky.
+    - A modern red passenger train arriving at a busy underground platform, with waiting passengers and station signage visible.
+    - An ethereal pale Siamese fighting fish (Betta fish) with delicate, flowing fins and tail, suspended in the tranquil water of an aquarium.
+    - A bright red ball with a cheerful smiley face, floating on the surface of water, reflecting the glistening sunlight.
+    - A young snowboarder in vibrant green attire carving through the snow with dynamic motion, sending a spray of snowflakes into the air.
+    - A couple elegantly dancing in a vintage-themed dance hall, with soft lighting and a romantic ambience, surrounded by other dancers.
+    - An action-packed scene of a jet ski rider performing a high-speed turn on the ocean waves, creating a large splash.
+    - A wakeboarder gliding on water, holding tightly to a rope attached to a boat, demonstrating skill and balance.
+    - A mature German Shepherd carrying a large stick with a playful puppy following alongside on a lush green field.
+    - A whimsical illustration of a bull and a cow dressed in human clothes, dancing on a beach with fireworks in the sky.
+    - A joyful teddy bear with open arms standing on a rock in a vibrant green field, with a backdrop of mountains and a clear blue sky.
+    - A portrait of a woman with a warm smile, featuring impressionistic brushstrokes and a play of light and shadow, highlighting her curly hair and blue eyes.
+    - A vintage yellow biplane flying over a canyon with a river, the landscape below is arid with plateaus and sparse vegetation.
+    - A sleek silver vintage fighter plane soaring above a canyon with a river, under a sky dotted with clouds.
+    - A snowman in a forest caught in a burst of flames, with a backdrop of snow-covered trees.
+    - A happy corgi dog with a reddish-brown and white coat sitting on grass, tongue out, looking cheerful.
+    - A young woman in casual clothing jumping joyfully on a sandy beach with a clear sky behind her.
+    - Two old metal teapots on a rustic stove with open blue flames heating them.
+    - Pouring white wine from a clear glass bottle into a wineglass, with a blurry background.
+    - A skilled barista pours steaming water into a series of glasses, creating a theatrical cascade of smoke and liquid for a coffee tasting experience.
+    - Juicy hamburgers cooking over an open flame on a grill, with the fire charing the bottom and smoke wafting upwards.
+    - A detailed image of a butterfly with orange and brown patterned wings resting on a bright white daisy in a green field.
+    - A mature husky dog with striking facial markings and bright eyes standing on a beach, with the waves of the sea in the background.
+    - A cheerful man holding a large white ceramic cup, enjoying a warm beverage outdoors, with a blurred natural backdrop.
+    - A couple engaged in cooking together in a bright kitchen, slicing vegetables and preparing a meal with a variety of fresh ingredients.
+
+      
+  n_prompt:
+    - "semi-realistic, cgi, 3d, render, sketch, cartoon, drawing, anime, text, close up, cropped, out of frame, worst quality, low quality, jpeg artifacts, ugly, duplicate, morbid, mutilated, extra fingers, mutated hands, poorly drawn hands, poorly drawn face, mutation, deformed, blurry, dehydrated, bad anatomy, bad proportions, extra limbs, cloned face, disfigured, gross proportions, malformed limbs, missing arms, missing legs, extra arms, extra legs, fused fingers, too many fingers, long neck"
+
+
+

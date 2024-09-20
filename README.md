@@ -17,3 +17,23 @@ by *Xiaoyu Shi<sup>1\*</sup>, Zhaoyang Huang<sup>1\*</sup>, Fu-Yun Wang<sup>1\*<
             }
 }
 ```
+
+
+
+
+
+
+## Usage
+
+1. Install environments
+```shell
+conda env create -f environment.yaml
+```
+2. Download models
+```shell
+git clone https://huggingface.co/wangfuyun/Motion-I2V
+```
+3. Run the code
+```shell
+python -m scripts.app 
+```

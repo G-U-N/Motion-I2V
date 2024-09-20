@@ -20,7 +20,14 @@ by *Xiaoyu Shi<sup>1\*</sup>, Zhaoyang Huang<sup>1\*</sup>, Fu-Yun Wang<sup>1\*<
 
 
 
-
+<div style="text-align: center;">
+  <img src="./assets/motion-i2v.png" alt="Image description" title="motion-i2v" style="width: 100%; height: auto;">
+            Overview of Motion-I2V. The first stage of Motion-I2V targets at deducing the motions that can plausibly animate
+the reference image. It is conditioned on the reference image and text prompt, and predicts the motion field maps between
+the reference frame and all the future frames. The second stage propagates reference image’s content to synthesize frames. A
+novel motion-augmented temporal layer enhances 1-D temporal attention with warped features. This operation enlarges the
+temporal receptive field and alleviates the complexity of directly learning the complicated spatial-temporal patterns.
+</div>
 
 
 ## Usage

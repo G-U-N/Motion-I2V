@@ -896,7 +896,7 @@ with gr.Blocks() as demo:
             )
 
             flow_unit_id = gr.Slider(
-                label="Flow Unit", minimum=1, maximum=100, step=1, value=4
+                label="Flow Unit", minimum=1, maximum=320, step=1, value=64
             )
             prompt = gr.Textbox(label="prompt")
 

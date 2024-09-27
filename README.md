@@ -48,3 +48,5 @@ python -m scripts.app
 ## ComfyUI
 
 [ComfyUI-IG-Motion-I2V](https://github.com/IDGallagher/ComfyUI-IG-Motion-I2V)
+
+![arch](https://github.com/IDGallagher/ComfyUI-IG-Motion-I2V/blob/main/assets/screenshot1.png)

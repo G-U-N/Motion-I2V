@@ -44,3 +44,7 @@ git clone https://huggingface.co/wangfuyun/Motion-I2V
 ```shell
 python -m scripts.app 
 ```
+
+## ComfyUI
+
+[ComfyUI-IG-Motion-I2V](https://github.com/IDGallagher/ComfyUI-IG-Motion-I2V)
